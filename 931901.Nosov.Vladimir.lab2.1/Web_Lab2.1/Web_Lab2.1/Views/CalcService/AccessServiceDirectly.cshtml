@@ -1,0 +1,19 @@
+﻿
+@inject WebLab2._1.Services.CalcService _CalcService
+@{
+    var calcValues = _CalcService.GetCalcValues2();
+}
+<h1>PassUsingModel</h1>
+<div>
+    <b>Rand Value First :</b>@calcValues.FirstRandValue<br>
+    <b>Rand Value Second :</b> @calcValues.SecondRandValue<br>
+    <b>Add :</b><br>
+    @calcValues.Sum<br>
+    <b>Sub :</b><br>
+    @calcValues.Difference<br>
+    <b>Mult :</b> <br>
+    @calcValues.Multiplication<br>
+    <b>Div :</b> <br>
+    @(calcValues.Division != null ? calcValues.Division : "Error")<br>
+
+</div>
